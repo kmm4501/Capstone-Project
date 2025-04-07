@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Survey</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form (ngSubmit)="submitSurvey()">
+    <ion-item>
+      <ion-label>Diet</ion-label>
+      <ion-select [(ngModel)]="survey.diet" name="diet" required>
+        <ion-select-option value="vegetarian">Vegetarian</ion-select-option>
+        <ion-select-option value="non-vegetarian">Non-Vegetarian</ion-select-option>
+        <ion-select-option value="vegan">Vegan</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Goal</ion-label>
+      <ion-select [(ngModel)]="survey.goal" name="goal" required>
+        <ion-select-option value="lose">Lose Weight</ion-select-option>
+        <ion-select-option value="gain">Gain Weight</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-button expand="full" type="submit">Submit Survey</ion-button>
+  </form>
+</ion-content>
